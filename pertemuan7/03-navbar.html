@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>03 - Navbar - Sebelum</title>
+    <style>
+        /* CSS reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya untuk navbar */
+        nav {
+            background-color: #333; /* warna gelap */
+            padding: 10px 20px; /* padding */
+            display: flex; /* Flexbox */
+            justify-content: space-between; /* logo di kiri, menu di kanan */
+            align-items: center; /* vertikal center */
+        }
+
+        /* Gaya untuk logo */
+        .logo {
+            color: #ffffff; /* warna putih */
+            font-size: 24px; /* ukuran font lebih besar */
+            text-decoration: none; /* hilangkan garis bawah */
+        }
+
+        /* Gaya untuk menu */
+        ul {
+            list-style: none; /* hilangkan bullet point */
+            display: flex; /* Flexbox horizontal */
+            gap: 20px; /* jarak antar item menu */
+        }
+
+        ul li a {
+            text-decoration: none; /* hilangkan garis bawah */
+            color: #ffffff; /* warna teks putih cerah */
+            padding: 5px 10px; /* padding untuk klik area lebih besar */
+        }
+
+        ul li a:hover {
+            color: #ffcc00; /* efek hover, ganti warna teks saat hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    INSTRUKSI PENGERJAAN:
+    1. Beri background warna gelap pada <nav>, set padding, dan jadikan Flexbox dengan justify-content: space-between agar logo dan menu terpisah di kiri-kanan.
+    2. Hilangkan bullet point (list-style: none) pada <ul> dan jadikan Flexbox agar item menu berjejer horizontal. Beri jarak antar elemen (gap).
+    3. Pada logo (.logo), ubah warnanya jadi putih, besarkan font, dan hilangkan garis bawah.
+    4. Pada link menu <a>, hilangkan garis bawah, beri warna teks putih cerah, dan padding.
+    5. Tambahkan efek hover pada link menu (misal warnanya berubah atau muncul garis bawah buatan).
+    -->
+    <nav>
+        <a href="#" class="logo">MyWebsite</a>
+        <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Layanan</a></li>
+            <li><a href="#">Tentang</a></li>
+            <li><a href="#">Kontak</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

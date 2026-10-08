@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>08 - Hero Section - Sebelum</title>
+  <style>
+        /* CSS reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya untuk header */
+        header {
+            height: 100vh; /* tinggi penuh layar */
+            background-image: linear-gradient(rgb(223, 212, 212), rgba(0, 0, 0, 0.5)), url('/pertemuan7/134008989625101361.jpg'); /* overlay dan gambar */
+            background-size: cover; /* agar gambar menutupi seluruh area */
+            background-position: center; /* posisi gambar di tengah */
+            display: flex; /* gunakan Flexbox */
+            flex-direction: column; /* arah konten vertikal */
+            justify-content: center; /* konten di tengah secara vertikal */
+            align-items: center; /* konten di tengah secara horizontal */
+            color: #ffffff; /* warna teks putih */
+            text-align: center; /* teks rata tengah */
+        }
+
+        .hero-content h1 {
+            font-size: 3rem; /* ukuran font besar untuk judul */
+            margin-bottom: 20px; /* jarak bawah dari judul ke paragraf */
+        }
+
+        .hero-content p {
+            font-size: 1.2rem; /* ukuran font untuk paragraf */
+            margin-bottom: 30px; /* jarak bawah dari paragraf ke tombol */
+        }
+
+        .btn {
+            padding: 10px 20px; /* padding dalam tombol */
+            background-color: #007BFF; /* warna biru untuk tombol */
+            color: #ffffff; /* teks putih pada tombol */
+            border-radius: 5px; /* sudut membulat pada tombol */
+            text-decoration: none; /* hilangkan garis bawah pada link tombol */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    INSTRUKSI PENGERJAAN:
+    1. Pada elemen <header>, atur height: 100vh agar memenuhi tinggi layar.
+    2. Tambahkan background-image pada <header>. Agar gambar tidak belang, gunakan background-size: cover dan background-position: center.
+    3. Agar teks mudah dibaca di atas gambar, tambahkan overlay linear-gradient pada property background-image (misal rgba hitam ke rgba hitam transparan).
+    4. Gunakan Flexbox pada <header> (display: flex, flex-direction: column, justify-content: center, align-items: center) agar konten tepat di tengah.
+    5. Ubah warna teks menjadi putih dan styling tombol (padding, background, border-radius).
+    -->
+    <header>
+        <div class="hero-content">
+            <h1>Bangun Masa Depan Digital Anda</h1>
+            <p>Kami membantu startup dan perusahaan bertransformasi menjadi lebih modern dengan teknologi web terbaru.</p>
+            <a href="#" class="btn">Mulai Proyek</a>
+        </div>
+    </header>
+</body>
+</html>

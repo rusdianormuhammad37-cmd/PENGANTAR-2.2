@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>05 - Pricing Table - Sebelum</title>
+    <style>
+        /* Reset dasar & styling body */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container untuk menyejajarkan paket secara horizontal */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            max-width: 1100px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        /* Gaya dasar pada setiap kartu .plan */
+        .plan {
+            background: #ffffff;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 40px 30px;
+            text-align: center;
+            flex: 1;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .plan:hover {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header Paket */
+        .plan h3 {
+            margin-bottom: 15px;
+            font-size: 1.6rem;
+            color: #333;
+        }
+
+        .plan .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+
+        /* Daftar Fitur (Menghilangkan bullet dan memberi jarak) */
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .plan ul li {
+            padding: 12px 0;
+            color: #555;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .plan ul li:last-child {
+            border-bottom: none;
+        }
+
+        /* Tombol yang diperlebar agar terlihat seperti tombol modern */
+        .btn {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            transition: background-color 0.2s ease;
+        }
+
+        .btn:hover {
+            background-color: #1a252f;
+        }
+
+        /* Khusus untuk paket tengah (.popular): menonjol & warna berbeda */
+        .plan.popular {
+            border: 2px solid #ff4757;
+            transform: scale(1.05);
+            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.15);
+            position: relative;
+            z-index: 2;
+        }
+
+        .plan.popular h3,
+        .plan.popular .price {
+            color: #ff4757;
+        }
+
+        .plan.popular .btn {
+            background-color: #ff4757;
+        }
+
+        .plan.popular .btn:hover {
+            background-color: #e84118;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- 
+    INSTRUKSI PENGERJAAN:
+    1. Gunakan CSS Grid atau Flexbox pada ".pricing-container" untuk menyejajarkan 3 paket secara horizontal.
+    2. Berikan gaya dasar pada setiap kartu ".plan" (border, padding, border-radius, background putih, text-align center).
+    3. Khusus untuk paket tengah (berikan class .popular), ubah ukuran agar sedikit lebih menonjol (transform: scale(1.05) atau padding lebih besar).
+    4. Ubah warna border/header pada paket popular untuk membedakannya.
+    5. Hilangkan bullet pada daftar fitur (ul) dan berikan jarak.
+    -->
+    <div class="pricing-container">
+        <div class="plan">
+            <h3>Basic</h3>
+            <h2>Gratis</h2>
+            <ul>
+                <li>1 Pengguna</li>
+                <li>Penyimpanan 1GB</li>
+                <li>Dukungan Komunitas</li>
+            </ul>
+            <button>Pilih Basic</button>
+        </div>
+        <div class="plan popular">
+            <h3>Pro (Populer)</h3>
+            <h2>Rp 100.000/bln</h2>
+            <ul>
+                <li>5 Pengguna</li>
+                <li>Penyimpanan 50GB</li>
+                <li>Dukungan Prioritas</li>
+            </ul>
+            <button>Pilih Pro</button>
+        </div>
+        <div class="plan">
+            <h3>Enterprise</h3>
+            <h2>Hubungi Kami</h2>
+            <ul>
+                <li>Pengguna Tak Terbatas</li>
+                <li>Penyimpanan Unlimited</li>
+                <li>Dukungan 24/7</li>
+            </ul>
+            <button>Pilih Enterprise</button>
+        </div>
+    </div>
+</body>
+</html>

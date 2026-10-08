@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>09 - Testimoni - Sebelum</title>
+    <style>
+        /* CSS reset dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Gaya untuk grid testimoni */
+        .testimonial-grid {
+            display: grid; /* CSS Grid */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* kolom responsif */
+            gap: 20px; /* jarak antar kartu */
+            padding: 20px; /* padding di sekitar grid */
+        }
+
+        /* Gaya untuk kartu testimoni */
+        .card {
+            background-color: #ffffff; /* putih */
+            padding: 20px; /* padding dalam kartu */
+            border-radius: 10px; /* sudut membulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* shadow ringan */
+            position: relative; /* posisi relatif untuk pseudo-element */
+        }
+
+        /* Pseudo-element untuk tanda kutip besar sebagai watermark */
+        .card::before {
+            content: '"'; /* karakter tanda kutip besar */
+            font-size: 100px; /* ukuran sangat besar */
+            color: rgba(0, 0, 0, 0.05); /* warna sangat pudar */
+            position: absolute; /* posisi absolut dalam kartu */
+            top: -20px; /* sedikit di atas kartu */
+            left: -10px; /* sedikit di kiri kartu */
+            z-index: -1; /* berada di belakang konten kartu */
+        }
+
+        /* Gaya untuk elemen author (nama dan jabatan) */
+        .author {
+            display: flex; /* gunakan flexbox untuk menata horizontal */
+            flex-direction: column; /* arah vertikal untuk nama dan jabatan */
+            margin-top: 15px; /* jarak atas dari teks testimoni */
+        }
+
+        .author h4 {
+            margin-bottom: 5px; /* jarak bawah untuk nama */
+        }
+        .author span {
+            font-size: 0.9em; /* ukuran font lebih kecil untuk jabatan */
+            color: #555; /* warna abu-abu gelap */
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    INSTRUKSI PENGERJAAN:
+    1. Atur container ".testimonial-grid" menggunakan CSS Grid. Gunakan grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) dan beri gap.
+    2. Berikan gaya pada kartu (background, padding, border-radius, shadow ringan).
+    3. Buat posisi kartu menjadi "position: relative". 
+    4. Gunakan pseudo-element "::before" pada kartu untuk menambahkan karakter tanda kutip besar (content: '"') di pojok kiri atas sebagai watermark (ukuran sangat besar, warna sangat pudar, z-index rendah).
+    5. Rapikan elemen gambar profil dan nama (bisa menggunakan flexbox untuk menjejerkannya secara horizontal).
+    -->
+    <div class="testimonial-grid">
+        <div class="card">
+            <p>"Pelayanan luar biasa, website saya jadi lebih cepat dan menarik."</p>
+            <div class="author">
+                <h4>Andi Wijaya</h4>
+                <span>CEO StartupX</span>
+            </div>
+        </div>
+        <div class="card">
+            <p>"Sangat mudah diajak komunikasi dan hasilnya di luar ekspektasi."</p>
+            <div class="author">
+                <h4>Siti Aminah</h4>
+                <span>Pemilik Toko Online</span>
+            </div>
+        </div>
+        <div class="card">
+            <p>"Kualitas kode sangat bersih, mudah dilanjutkan oleh tim internal kami."</p>
+            <div class="author">
+                <h4>Reza Pratama</h4>
+                <span>CTO TechIndo</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
