@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    background-color: #ffffff;
+    margin: 0;
+  }
+
+  .report-container {
+    width: 600px; /* Sesuaikan lebar tabel */
+    color: #000;
+  }
+
+  /* Gaya untuk Kop Judul Laporan */
+  .report-header {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .report-header h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .report-header p {
+    margin: 3px 0 0 0;
+    font-size: 16px;
+  }
+
+  /* Gaya Utama Tabel */
+  .report-table {
+    width: 100%;
+    border-collapse: collapse; /* Menyatukan garis border yang berdekatan */
+    border: 2px solid #1c3d5a; /* Garis tepi luar yang lebih tebal */
+  }
+
+  .report-table th, 
+  .report-table td {
+    border: 1px solid #1c3d5a; /* Garis antar sel */
+    padding: 8px 12px;
+    font-size: 16px;
+  }
+
+  /* Gaya untuk Header Kolom (Kode, Keterangan, Nominal) */
+  .report-table thead th {
+    background-color: #d2dee8; /* Warna latar abu-abu kebiruan */
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid #1c3d5a; /* Garis bawah header lebih tebal */
+  }
+
+  /* Gaya untuk Footer (Total Laba Bersih) */
+  .report-table tfoot td {
+    background-color: #d2dee8;
+    border-top: 2px solid #1c3d5a; /* Garis atas footer lebih tebal */
+  }
+
+  /* Kelas utilitas untuk perataan teks dan format khusus */
+  .text-center { text-align: center; }
+  .text-right { text-align: right; }
+  .text-left { text-align: left; }
+  .bold { font-weight: bold; }
+
+  /* Lebar spesifik untuk kolom agar proporsional */
+  .col-kode { width: 15%; }
+  .col-ket { width: 55%; }
+  .col-nom { width: 30%; }

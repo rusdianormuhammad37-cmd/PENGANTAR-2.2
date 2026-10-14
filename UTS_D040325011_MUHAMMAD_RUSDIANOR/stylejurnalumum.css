@@ -1,0 +1,130 @@
+ body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  /* Kontainer Formulir */
+  .form-container {
+    width: 600px; /* Sesuaikan lebar dengan kebutuhan Anda */
+    padding: 30px 20px; /* Jarak antara konten dan garis */
+    
+    /* INI KUNCINYA: Hanya menambahkan garis atas dan bawah */
+    border-top: 3px solid #1c3d5a; /* Garis biru gelap di atas */
+    border-bottom: 3px solid #1c3d5a; /* Garis biru gelap di bawah */
+    
+    /* Pastikan tidak ada garis di sisi lain atau efek kotak */
+    border-left: none;
+    border-right: none;
+    box-shadow: none; 
+    background-color: transparent;
+}
+
+  .form-container h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #000;
+  }
+
+  /* Menggunakan Grid untuk menyejajarkan label dan input */
+  .form-group {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  /* Khusus textarea agar label sejajar ke atas */
+  .form-group.align-top {
+    align-items: flex-start;
+  }
+
+  .form-group.align-top label {
+    margin-top: 8px; /* Menyesuaikan label agar sejajar dengan baris pertama teks */
+  }
+
+  .form-group label {
+    font-size: 16px;
+    color: #000;
+  }
+
+  /* Gaya seragam untuk semua input, select, dan textarea */
+  .form-group input[type="text"],
+  .form-group input[type="date"],
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 10px;
+    border: 1px solid #1c3d5a; /* Border warna biru gelap */
+    border-radius: 4px;
+    font-size: 15px;
+    font-family: inherit;
+    background-color: #ffffff;
+  }
+
+  /* Latar belakang sedikit abu-abu untuk select dropdown */
+  .form-group select {
+    background-color: #f4f6f9;
+    cursor: pointer;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 70px;
+  }
+
+  /* Grup Radio Button untuk Posisi Saldo */
+  .radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .radio-item {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  /* Area Tombol Aksi */
+  .action-buttons {
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .btn-simpan {
+    background-color: #5d6d7e; /* Warna abu-abu kebiruan */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  .btn-batal {
+    background-color: transparent;
+    color: #5d6d7e;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .btn-simpan:hover {
+    background-color: #4a5a6a;
+  }
+
+  .btn-batal:hover {
+    text-decoration: underline;
+  }

@@ -1,0 +1,112 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    background-color: #ffffff;
+  }
+
+  /* Container utama */
+  .dashboard-container {
+    display: flex;
+    height: 100vh;
+  }
+
+  /* --- SIDEBAR KIRI --- */
+  .sidebar {
+    width: 250px; /* Diperlebar */
+    background-color: #212511; 
+    border-right: 3px solid #1c3d5a; /* Border lebih tebal */
+    padding: 30px; /* Padding diperbesar */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+
+  .sidebar h2 {
+    margin: 0 0 15px 0;
+    font-size: 28px; /* Font menu utama lebih besar */
+    color: #fffdfd;
+  }
+
+  .sidebar hr {
+    border: none;
+    border-top: 1px solid #f4f8fd;
+    margin-bottom: 30px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  .sidebar li {
+    margin-bottom: 25px; /* Jarak antar menu lebih renggang */
+    font-size: 24px; /* Font navigasi diperbesar */
+    color: #faf3f3;
+    cursor: pointer;
+  }
+
+  .sidebar .logout {
+    font-size: 22px;
+    margin-top: auto; 
+    text-align: center;
+    cursor: pointer;
+    color: #f4f8fd;
+  }
+
+  /* --- KONTEN UTAMA KANAN --- */
+  .main-content {
+    flex-grow: 1;
+    padding: 60px; /* Jarak dari tepi layar diperbesar */
+    background-color: #ffffff;
+  }
+
+  .main-content h1 {
+    margin: 0 0 10px 0;
+    font-size: 46px; /* Judul sangat besar seperti di gambar */
+    font-weight: 900; /* Ekstra tebal */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+  }
+
+  .main-content p {
+    margin: 0 0 50px 0;
+    font-size: 24px; /* Sub-judul lebih besar */
+    color: #222;
+  }
+
+  /* --- LAYOUT KARTU (CARDS) --- */
+  .card-container {
+    display: flex;
+    gap: 30px; /* Jarak antar kartu lebih jauh */
+  }
+
+  .card {
+    background-color: #f0f4f8; 
+    border: 3px solid #1c3d5a; /* Border kartu tebal */
+    border-radius: 8px;
+    padding: 35px 50px; /* Kartu lebih gemuk dan luas */
+    text-align: center;
+    min-width: 320px; /* Ukuran minimal kartu lebih panjang */
+    /* Bayangan solid bergeser ke kanan bawah seperti pada gambar */
+    box-shadow: 8px 8px 0px #b0c0d0; 
+  }
+
+  .card .card-title {
+    display: block;
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #070707;
+    text-transform: uppercase;
+  }
+
+  .card .card-value {
+    display: block;
+    font-size: 38px; /* Nominal uang sangat besar dan jelas */
+    font-weight: 900; /* Ekstra tebal */
+    color: #000;
+  }

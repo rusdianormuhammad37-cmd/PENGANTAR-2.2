@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Input Jurnal Umum</title>
+<link rel="stylesheet" href="stylejurnalumum.css">
+</head>
+<body>
+
+<div class="form-container">
+  <h2>FORM INPUT JURNAL UMUM</h2>
+  
+  <form>
+    <div class="form-group">
+      <label for="tanggal">Tanggal Transaksi</label>
+      <input type="date" id="tanggal" name="tanggal">
+    </div>
+
+    <div class="form-group">
+      <label for="no_bukti">No. Bukti</label>
+      <input type="text" id="no_bukti" name="no_bukti">
+    </div>
+
+    <div class="form-group align-top">
+      <label for="keterangan">Keterangan</label>
+      <textarea id="keterangan" name="keterangan"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="nama_akun">Nama Akun</label>
+      <select id="nama_akun" name="nama_akun">
+        <option value=""></option>
+        <option value="kas">Kas</option>
+        <option value="piutang">Piutang</option>
+        <option value="modal">Modal</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Posisi Saldo</label>
+      <div class="radio-group">
+        <label class="radio-item">
+          <input type="radio" name="posisi_saldo" value="debit" checked> Debit
+        </label>
+        <label class="radio-item">
+          <input type="radio" name="posisi_saldo" value="kredit"> Kredit
+        </label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="nominal">Nominal (Rp)</label>
+      <input type="text" id="nominal" name="nominal">
+    </div>
+
+    <div class="action-buttons">
+      <button type="button" class="btn-simpan">[ SIMPAN TRANSAKSI ]</button>
+      <button type="button" class="btn-batal">[ BATAL ]</button>
+    </div>
+  </form>
+</div>
+
+</body>
+</html>

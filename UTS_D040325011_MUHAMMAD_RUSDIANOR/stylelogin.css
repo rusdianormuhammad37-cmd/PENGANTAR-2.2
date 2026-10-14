@@ -1,0 +1,74 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f611; 
+    margin: 0;
+  }
+ 
+   .login-container {
+            background-color: #ffffff; 
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 2px 4dvi rgba(0, 0, 0, 0.1); 
+            width: 300px; 
+    }
+    .login-container label {
+            display: block; 
+            margin-bottom: 5px; 
+    }
+    .login-container h2 {
+            padding-bottom: 5px;
+            font-size: 20px;
+            fornt-weight: bold;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+    .login-container h3 {
+            padding: 5px;
+            font-size:15px;
+            text-align: center;
+            margin-bottom: 20px;
+            font-weight: normal;   
+        }
+
+        .login-container label {
+            display: block; 
+            margin-bottom: 5px; 
+        }
+        .login-container input[type="username"],
+        .login-container input[type="password"] {
+            width: 100%; 
+            box-sizing: border-box; 
+            padding: 10px; /* padding dalam input */
+            margin-bottom: 15px; /* jarak bawah antar input */
+            border: 1px solid #ccc; /* border abu-abu */
+            border-radius: 5px; /* sudut membulat */
+        }
+
+        /* Pseudo-class :focus pada input */
+        .login-container input[type="username"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #007BFF; /* warna border biru saat fokus */
+            outline: none; /* hilangkan outline default */
+        }
+
+  /* 
+    Tombol "MASUK SISTEM" berwarna biru (#0d6efd) dengan teks putih.
+  */
+ .login-container button[type="submit"] {
+            width: 100%; /* lebar penuh */
+            background-color: #0d6efd; /* warna biru */
+            color: #ffffff; /* teks putih */
+            padding: 12px; /* padding dalam tombol */
+            border-radius: 5px; /* sudut membulat */
+            cursor: pointer; /* kursor pointer saat hover */
+            border: none; /* hilangkan border default */
+        }
+
+        /* Efek hover pada tombol submit */
+        .login-container button[type="submit"]:hover {
+            background-color: #0056b3; /* warna berubah saat hover */
+        }
