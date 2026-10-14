@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>10 - Galeri Gambar - Sebelum</title>
-    <style>
+<style>
         /* CSS reset dasar */
         * {
             margin: 0;
@@ -11,18 +11,22 @@
             box-sizing: border-box;
         }
 
+        /* Atur body agar konten berada di tengah layar */
         body {
-            font-family: Arial, sans-serif; /* font dasar */
-            background-color: #f0f0f0; /* warna latar belakang abu-abu terang */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0; /* abu-abu terang */
         }
+
         /* Gaya untuk galeri gambar */
         .gallery {
-            display: grid; /* CSS Grid */
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Menggunakan auto-fit */
-            justify-content: center; /* Membuat grid berada di tengah */
-            gap: 15px; /* jarak antar gambar */
+            display: grid; /* gunakan CSS Grid */
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* kolom responsif */
+            gap: 20px; /* jarak antar gambar */
             padding: 20px; /* padding di sekitar galeri */
-}
+        }
 
         .img-box {
             aspect-ratio: 1/1; /* kotak persegi */
@@ -33,13 +37,13 @@
         .img-box img {
             width: 100%; /* lebar penuh */
             height: 100%; /* tinggi penuh */
-            object-fit: cover; /* gambar menutupi kotak tanpa distorsi */
+            object-fit: cover; /* gambar memenuhi kotak tanpa distorsi */
             filter: grayscale(100%); /* hitam putih secara default */
-            transition: all 0.3s ease; /* efek transisi halus */
+            transition: transform 0.3s ease, filter 0.3s ease; /* efek transisi */
         }
 
         .img-box img:hover {
-            filter: grayscale(0); /* warna normal saat hover */
+            filter: grayscale(0); /* warna saat hover */
             transform: scale(1.1); /* membesar sedikit saat hover */
         }
     </style>
@@ -56,10 +60,10 @@
     <div class="gallery">
         <div class="img-box"><img src="Bali tour package.jpe" alt="Pemandangan 1"></div>
         <div class="img-box"><img src="15 Top Tours in Bali_ A Guide To The Best Activities - Goats On The Road.jpe" alt="Pemandangan 2"></div>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=300" alt="Pemandangan 3"></div>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=300" alt="Pemandangan 4"></div>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=300" alt="Pemandangan 5"></div>
-        <div class="img-box"><img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=300" alt="Pemandangan 6"></div>
+        <div class="img-box"><img src="piw0_1 di TikTok.jpe" alt="Pemandangan 3"></div>
+        <div class="img-box"><img src="wowo.jpe" alt="Pemandangan 4"></div>
+        <div class="img-box"><img src="𓏲 ๋࣭ 𝗧𝗥𝖠𝖶𝖠𝗟𝗜𝖭.jpe" alt="Pemandangan 5"></div>
+        <div class="img-box"><img src="pria itu lagi.jpe" alt="Pemandangan 6"></div>
     </div>
 </body>
 </html>

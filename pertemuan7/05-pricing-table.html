@@ -3,127 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <title>05 - Pricing Table - Sebelum</title>
-    <style>
-        /* Reset dasar & styling body */
+<style>
+        /* CSS reset dasar */
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
         }
 
-        body {
-            background-color: #f4f7f6;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+       body {
+        display: flex;
+        justify-content: center; /* Mengatur posisi card ke tengah secara horizontal */
+        align-items: center;     /* Mengatur posisi card ke tengah secara vertikal */
+        min-height: 100vh;       /* Memastikan tinggi container memenuhi seluruh layar */
+        margin: 0;
         }
 
-        /* Container untuk menyejajarkan paket secara horizontal */
         .pricing-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 25px;
-            max-width: 1100px;
-            width: 100%;
-            padding: 20px;
+            display: flex; /* gunakan Flexbox untuk menyejajarkan paket */
+            justify-content: center; /* sejajarkan ke tengah */
+            gap: 20px; /* jarak antar paket */
+            padding: 50px; /* padding di sekitar container */
         }
 
-        /* Gaya dasar pada setiap kartu .plan */
         .plan {
-            background: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 12px;
-            padding: 40px 30px;
-            text-align: center;
-            flex: 1;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
+            background-color: #ffffff; /* latar belakang putih */
+            border: 1px solid #cccccc; /* border abu-abu */
+            border-radius: 10px; /* sudut membulat */
+            padding: 30px; /* padding dalam kartu */
+            text-align: center; /* teks rata tengah */
+            width: 250px; /* lebar tetap untuk setiap paket */
+            transition: transform 0.3s ease; /* efek transisi saat hover */
         }
 
-        .plan:hover {
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+        .plan.popular {
+            transform: scale(1.05); /* paket populer sedikit lebih besar */
+            border-color: #007BFF; /* ubah warna border untuk paket populer */
         }
 
-        /* Header Paket */
         .plan h3 {
-            margin-bottom: 15px;
-            font-size: 1.6rem;
-            color: #333;
+            margin-bottom: 10px; /* jarak bawah judul paket */
         }
 
-        .plan .price {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #2c3e50;
-            margin-bottom: 25px;
+        .plan h2 {
+            margin-bottom: 20px; /* jarak bawah harga paket */
         }
 
-        /* Daftar Fitur (Menghilangkan bullet dan memberi jarak) */
         .plan ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 30px;
-            flex-grow: 1;
+            list-style-type: none; /* hilangkan bullet pada daftar fitur */
+            margin-bottom: 20px; /* jarak bawah daftar fitur */
         }
 
         .plan ul li {
-            padding: 12px 0;
-            color: #555;
-            font-size: 0.95rem;
-            border-bottom: 1px solid #f1f1f1;
+            margin-bottom: 10px; /* jarak antar fitur */
         }
 
-        .plan ul li:last-child {
-            border-bottom: none;
-        }
-
-        /* Tombol yang diperlebar agar terlihat seperti tombol modern */
-        .btn {
-            background-color: #2c3e50;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 1rem;
-            font-weight: 600;
-            width: 100%;
-            transition: background-color 0.2s ease;
-        }
-
-        .btn:hover {
-            background-color: #1a252f;
-        }
-
-        /* Khusus untuk paket tengah (.popular): menonjol & warna berbeda */
-        .plan.popular {
-            border: 2px solid #ff4757;
-            transform: scale(1.05);
-            box-shadow: 0 12px 25px rgba(255, 71, 87, 0.15);
-            position: relative;
-            z-index: 2;
-        }
-
-        .plan.popular h3,
-        .plan.popular .price {
-            color: #ff4757;
-        }
-
-        .plan.popular .btn {
-            background-color: #ff4757;
-        }
-
-        .plan.popular .btn:hover {
-            background-color: #e84118;
+        .plan button {
+            padding: 10px 20px; /* padding dalam tombol */
+            background-color: #007BFF; /* warna biru untuk tombol */
+            color: #ffffff; /* teks putih pada tombol */
+            border-radius: 5px; /* sudut membulat pada tombol */
+            border: none; /* hilangkan border default tombol */
+            cursor: pointer; /* ubah kursor saat hover tombol */
         }
     </style>
-
 </head>
 <body>
     <!-- 
